@@ -1,0 +1,121 @@
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@800&display=swap");
+*,
+*::after,
+*::before {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Manrope", sans-serif;
+  min-height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background-color: #1f2632;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 5rem;
+}
+
+.quote-container {
+  position: relative;
+  background-color: #323a49;
+  border-radius: 10px;
+  padding: 3rem 3rem 4rem 3rem;
+  gap: 2rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: min(90%, 500px);
+}
+
+.quote-container .quote-author {
+  text-align: center;
+  color: #52ffa8;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-size: 12px;
+  -webkit-transition: all 0.5s linear;
+  transition: all 0.5s linear;
+}
+
+.quote-container .quote {
+  text-align: center;
+  font-size: 24px;
+  color: #cee3e9;
+  -webkit-transition: all 0.5s linear;
+  transition: all 0.5s linear;
+}
+
+.quote-container .quote::before {
+  content: open-quote;
+}
+
+.quote-container .quote::after {
+  content: close-quote;
+}
+
+.quote-container .divider {
+  width: 100%;
+}
+
+.quote-container .dice-btn {
+  position: absolute;
+  bottom: 0;
+  -webkit-transform: translateY(50%);
+          transform: translateY(50%);
+  padding: 0.8rem;
+  border-radius: 50%;
+  border: none;
+  height: 60px;
+  width: 60px;
+  background-color: #52ffa8;
+  cursor: pointer;
+  -webkit-transition: -webkit-box-shadow 0.25s linear;
+  transition: -webkit-box-shadow 0.25s linear;
+  transition: box-shadow 0.25s linear;
+  transition: box-shadow 0.25s linear, -webkit-box-shadow 0.25s linear;
+}
+
+.quote-container .dice-btn:hover {
+  -webkit-box-shadow: 0px 0px 25px 5px #52ffa8;
+          box-shadow: 0px 0px 25px 5px #52ffa8;
+}
+
+.quote-container .dice-btn .dice {
+  display: block;
+  width: 70%;
+  margin: auto;
+}
+
+.attribution {
+  font-size: 11px;
+  color: #cee3e9;
+  text-align: center;
+  width: min(90%, 500px);
+}
+
+.attribution a {
+  color: #52ffa8;
+}
+/*# sourceMappingURL=style.css.map */

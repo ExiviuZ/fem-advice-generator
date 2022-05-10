@@ -1,0 +1,107 @@
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@800&display=swap");
+
+$fs-28: 28px;
+$ff-manrope: "Manrope", sans-serif;
+
+// ### Primary
+
+$lightCyan: hsl(193, 38%, 86%);
+$neonGreen: hsl(150, 100%, 66%);
+
+// ### Neutral
+
+$grayishBlue: hsl(217, 19%, 38%);
+$darkGrayishBlue: hsl(217, 19%, 24%);
+$darkBlue: hsl(218, 23%, 16%);
+
+// ## Typography
+
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: $ff-manrope;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: $darkBlue;
+  flex-direction: column;
+  gap: 5rem;
+}
+
+.quote-container {
+  position: relative;
+  background-color: $darkGrayishBlue;
+  border-radius: 10px;
+  padding: 3rem 3rem 4rem 3rem;
+  gap: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  width: #{"min(90%, 500px)"};
+
+  .quote-author {
+    text-align: center;
+    color: $neonGreen;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 12px;
+    transition: all 0.5s linear;
+  }
+
+  .quote {
+    text-align: center;
+    font-size: 24px;
+    color: $lightCyan;
+    transition: all 0.5s linear;
+    &::before {
+      content: open-quote;
+    }
+    &::after {
+      content: close-quote;
+    }
+  }
+
+  .divider {
+    width: 100%;
+  }
+
+  .dice-btn {
+    position: absolute;
+    bottom: 0;
+    transform: translateY(50%);
+    padding: 0.8rem;
+    border-radius: 50%;
+    border: none;
+    height: 60px;
+    width: 60px;
+    background-color: $neonGreen;
+    cursor: pointer;
+    transition: box-shadow 0.25s linear;
+    &:hover {
+      box-shadow: 0px 0px 25px 5px $neonGreen;
+    }
+    .dice {
+      display: block;
+      width: 70%;
+      margin: auto;
+    }
+  }
+}
+
+.attribution {
+  font-size: 11px;
+  color: $lightCyan;
+  text-align: center;
+  width: #{"min(90%, 500px)"};
+}
+.attribution a {
+  color: $neonGreen;
+}
